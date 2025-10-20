@@ -17,7 +17,7 @@ $events:=$forms.formEvents($form)
 $eventsInMethod:=$forms.formMethodEvents($form)
 
 /*
-	find events that are checked form but not used in method
+	find events that are activated in form but not used in method
 */
 
 var $notUsedInMethod : Collection
@@ -29,7 +29,7 @@ For each ($event; $events)
 End for each 
 
 /*
-	find events that are not checked form but used in method
+	find events that are not activated form but used in method
 */
 
 var $notActivatedInForm : Collection
