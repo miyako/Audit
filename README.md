@@ -24,7 +24,7 @@ var $notUsedInMethod : Collection
 $notUsedInMethod:=[]
 For each ($event; $events)
 	If ($eventsInMethod.query("constant == :1 and token == :2"; $event.constant; $event.token).length=0)
-		$notUsedInMethod.push($eventsInMethod)
+		$notUsedInMethod.push($event)
 	End if 
 End for each 
 
