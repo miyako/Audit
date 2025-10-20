@@ -73,9 +73,9 @@ Function formDefinition($formName : Text; $tableNumber : Integer) : Object
 	
 	var $file : 4D:C1709.File
 	If (Is table number valid:C999($tableNumber))
-		$file:=Folder:C1567("/SOURCES/TableForms/").folder(String:C10($tableNumber)).folder($formName).file(This:C1470.fullName)
+		$file:=Folder:C1567("/SOURCES/TableForms/"; *).folder(String:C10($tableNumber)).folder($formName).file(This:C1470.fullName)
 	Else 
-		$file:=Folder:C1567("/SOURCES/Forms/").folder($formName).file(This:C1470.fullName)
+		$file:=Folder:C1567("/SOURCES/Forms/"; *).folder($formName).file(This:C1470.fullName)
 	End if 
 	
 	If (Not:C34($file.exists))
